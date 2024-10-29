@@ -1,6 +1,8 @@
 "use client";
 
+
 const Error = ({ error, reset }) => {
+
   return (
     <>
       <h3>Something Went Wrong</h3>
