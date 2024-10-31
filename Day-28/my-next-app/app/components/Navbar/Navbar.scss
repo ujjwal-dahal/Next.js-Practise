@@ -1,0 +1,105 @@
+$bg-color: #1a1a2e;
+$text-color: #e0e0e0;
+$highlight-color: #e94560;
+$button-glow-color: rgba(233, 69, 96, 0.5);
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: $bg-color;
+  color: $text-color;
+  height: 6rem;
+
+  &__logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  &__menu {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    font-size: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+   
+
+      > a {
+        text-decoration: none;
+        color: $text-color;
+        font-weight: 500;
+        padding-bottom: 2px;
+        position: relative;
+        transition: color 0.3s ease;
+      
+
+        &:hover {
+          color: $highlight-color;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          height: 2px;
+          width: 100%;
+          background-color: $highlight-color;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+    }
+
+    .nav-btn{
+      display: flex;
+      width: 20%;
+      align-items: center;
+      gap: 7px;
+      
+
+
+       .login-btn {
+        background: transparent;
+        color: $highlight-color;
+        border: 2px solid $highlight-color;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        margin-right: 10px;
+
+        &:hover {
+          background: $highlight-color;
+          color: $bg-color;
+          box-shadow: 0 0 10px $button-glow-color;
+        }
+      }
+
+      .signup-btn {
+        background: $highlight-color;
+        color: $bg-color;
+        border: 2px solid transparent;
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          background: transparent;
+          color: $highlight-color;
+          border-color: $highlight-color;
+          box-shadow: 0 0 10px $button-glow-color;
+        }
+      }
+    
+  }
+}
