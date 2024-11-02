@@ -21,7 +21,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <div className="" style={{
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center",
+          width:"100vw",
+          height:"100vh",
+          gap:"10px",
+          backgroundColor:"black",
+          flexDirection:"column"
+        }}>
         {children}
+        </div>
       </body>
     </html>
   );
