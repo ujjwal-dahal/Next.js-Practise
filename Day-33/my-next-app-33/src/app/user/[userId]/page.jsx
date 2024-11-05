@@ -27,3 +27,16 @@ export default async function UserId({params}){
 
   </>
 }
+
+
+export const generateStaticParams = async ()=>{
+  const data = fetchingData();
+  const users = await data;
+
+  return users.map((user)=>{
+    id : user.id.toString()
+
+  })
+
+
+}
