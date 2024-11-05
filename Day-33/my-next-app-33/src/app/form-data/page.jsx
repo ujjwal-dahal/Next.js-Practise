@@ -51,12 +51,12 @@ export default function FormData() {
     <div className="main-container">
       {apiData.map((item) => (
         <div className="container" key={item.id}>
-          <p>{item.name}</p>
-          <p>{item.email}</p>
-          <p>{item.number}</p>
-          <p>{item.password}</p>
-          <button onClick={() => deleteData(item.id)}>Delete</button>
-          <button onClick={() => updateData(item.id)}>Update</button>
+          <p>Name : {item.name}</p>
+          <p>Email : {item.email}</p>
+          <p>Phone : {item.number}</p>
+          <p>Password : {item.password}</p>
+          <button onClick={() => deleteData(item.id)} className="btn delete-btn">Delete</button>
+          <button onClick={() => updateData(item.id)} className="btn update-btn">Update</button>
         </div>
       ))}
     </div>

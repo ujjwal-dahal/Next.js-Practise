@@ -1,45 +1,39 @@
-// Main container styling
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9; 
   min-height: 100vh;
   font-family: Arial, sans-serif;
 
-  // Individual user data container styling
   .container {
     width: 100%;
     max-width: 600px;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    background-color: #ffffff; 
+    border: 1px solid #dcdcdc; 
     border-radius: 8px;
     padding: 20px;
     margin: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    // Hover effect for the user data container
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
     }
 
-    // Styling for the text elements
     p {
       font-size: 16px;
-      color: #333333;
+      color: #444444; 
       margin: 5px 0;
       line-height: 1.5;
     }
 
-    // Delete button styling
-    button {
-      margin-top: 10px;
+    .btn {
+      margin: 10px 5px 0 5px;
       padding: 10px 20px;
-      background-color: #ff4d4f;
-      color: #ffffff;
+      color: #ffffff; 
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -47,13 +41,28 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
 
-      // Hover and active effects for the button
       &:hover {
-        background-color: #e63946;
+        background-color: #e63946; 
       }
 
       &:active {
-        background-color: #c52c2f;
+        background-color: #7e1e20; 
+      }
+    }
+
+    .delete-btn {
+      background-color: #ff4d4f; 
+
+      &:hover {
+        background-color: #e63946; 
+      }
+    }
+
+    .update-btn {
+      background-color: #4caf50; 
+
+      &:hover {
+        background-color: #388e3c; 
       }
     }
   }

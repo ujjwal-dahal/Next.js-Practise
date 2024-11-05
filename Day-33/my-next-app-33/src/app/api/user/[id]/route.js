@@ -16,7 +16,7 @@ export async function GET(request, { params }) {
     const connection = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "0220",
+      password: process.env.DATABASE_PW,
       database: "nextjs_backend",
     });
 
@@ -66,7 +66,7 @@ export async function PUT(request) {
     const connection = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "0220",
+      password: process.env.DATABASE_PW,
       database: "nextjs_backend",
     });
 

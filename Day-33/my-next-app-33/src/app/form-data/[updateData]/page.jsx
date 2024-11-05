@@ -3,7 +3,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import "./updateData.scss"
+import "./updateData.scss";
 
 const UpdateData = ({ params }) => {
   const router = useRouter();
@@ -21,7 +21,9 @@ const UpdateData = ({ params }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/user/${userId}`);
+        const response = await axios.get(
+          `http://localhost:3001/api/user/${userId}`
+        );
         setUpdatedData(response.data.data); // Make sure response.data is structured correctly
       } catch (error) {
         console.error("Error fetching data:", error);

@@ -37,7 +37,7 @@ export async function POST(request) {
     const connection = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "0220",
+      password: process.env.DATABASE_PW,
       database: "nextjs_backend",
     });
 
@@ -70,7 +70,7 @@ export async function DELETE(request){
     const connection = await mysql.createConnection({
       host : "localhost",
       user : "root",
-      password : "0220",
+      password : process.env.DATABASE_PW,
       database : "nextjs_backend"
     })
 
