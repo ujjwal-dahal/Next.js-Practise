@@ -1,0 +1,68 @@
+
+$primary-color: #4CAF50; 
+$secondary-color: #f2f2f2; 
+$error-color: #f44336; 
+$font-family: 'Arial', sans-serif;
+
+body {
+  font-family: $font-family;
+  background-color: $secondary-color;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  div {
+    margin-bottom: 15px;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}

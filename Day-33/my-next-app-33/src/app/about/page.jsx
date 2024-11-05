@@ -5,6 +5,7 @@ import { redirect } from "next/navigation"
 
 export default function Page(){
 
+
   const [logOut , setLogOut] = useState(false)
   if(logOut){
     redirect("/logout")

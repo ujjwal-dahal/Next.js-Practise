@@ -1,0 +1,110 @@
+// form.scss
+
+// Variables for colors, spacing, and fonts
+$primary-color: #4a90e2;
+$secondary-color: #333;
+$background-color: #f7f7f7;
+$border-color: #ddd;
+$hover-color: darken($primary-color, 10%);
+$border-radius: 6px;
+$padding: 20px;
+$margin-bottom: 15px;
+$form-width: 400px;
+$font-size: 1rem;
+$button-padding: 12px;
+
+.container {
+  display: flex;
+  justify-content: center; // Center align the form container
+  align-items: center;
+  min-height: 100vh; // Make the container fill the viewport height
+  background-color: lighten($background-color, 5%); // Lighten background for contrast
+}
+
+.form-container {
+  background-color: $background-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: $form-width;
+  width: 100%; // Ensure responsiveness
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-2px); // Subtle lift effect on hover
+  }
+}
+
+h1 {
+  text-align: center;
+  color: $secondary-color;
+  margin-bottom: 20px;
+  font-size: 2rem; // Increased font size for better visibility
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    margin-bottom: $margin-bottom;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size;
+    transition: border-color 0.3s;
+
+    &::placeholder {
+      color: $border-color;
+      opacity: 0.7;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 5px rgba($primary-color, 0.5);
+    }
+  }
+
+  button {
+    padding: $button-padding;
+    border: none;
+    border-radius: $border-radius;
+    background-color: $primary-color;
+    color: #fff;
+    font-size: $font-size;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+      background-color: $hover-color;
+      transform: scale(1.05); // Scale effect on hover
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 480px) {
+  $form-width: 100%;
+  .form-container {
+    padding: $padding * 0.75; // Reduce padding for smaller screens
+  }
+
+  h1 {
+    font-size: 1.5rem; // Adjust heading size
+  }
+
+  input,
+  button {
+    font-size: 0.9rem; // Slightly smaller font size
+  }
+}
