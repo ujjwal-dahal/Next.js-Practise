@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Roboto } from "next/font/google";
+import { ToastContainer } from "react-toastify";
+import "../../node_modules/react-toastify/dist/ReactToastify.css";
 // import "./globals.css";
 
 const geistSans = localFont({
@@ -34,7 +36,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        {children}
+        <ToastContainer />
+
+      </body>
     </html>
   );
 }

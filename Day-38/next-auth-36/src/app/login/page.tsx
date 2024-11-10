@@ -4,6 +4,8 @@
 import "./Login.scss";
 import Link from "next/link";
 import { loginHandler } from "./loginHandler";
+import { CredentialsSignin } from "next-auth";
+import { toast } from "react-toastify";
 
 export default function Login() {
 
@@ -12,7 +14,8 @@ export default function Login() {
     try {
       await loginHandler(formData); // Attempt to log in
     } catch (err) {
-      throw new Error("Error")
+      // throw new CredentialsSignin("Error")
+      toast.error("Error")
     }
   };
 

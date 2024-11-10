@@ -3,6 +3,7 @@
 import "./Signup.scss";
 import HandleSignupSubmit from "./handleSignupSubmit";
 import { useRouter } from "next/navigation"; // Import useRouter for redirection
+import { toast } from "react-toastify";
 
 export default function Signup() {
   const router = useRouter(); // Hook for client-side navigation
@@ -15,8 +16,10 @@ export default function Signup() {
     try {
       await HandleSignupSubmit(formData);
       router.push("/login"); // Redirect to login page after successful signup
+      toast.success("Registration Successfull")
     } catch (error) {
-      console.error(error.message);
+      // console.error(error.message);
+      toast.error(error.message)
     }
   };
 
