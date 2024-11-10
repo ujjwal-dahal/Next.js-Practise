@@ -1,12 +1,9 @@
-"use server";
+"use client";
 
 // loginHandler.ts
 import { signIn } from "next-auth/react";
-import { toast } from "react-toastify";
 
-export const loginHandler = async (formData: FormData) => {
-  const email = formData.get("email") as string 
-  const password = formData.get("password") as string 
+export const loginHandler = async (email : string , password : string) => {
 
   try {
     //signIn method auth file dekhi aayo
@@ -16,9 +13,9 @@ export const loginHandler = async (formData: FormData) => {
     const result = await signIn("credentials", {
       email,
       password,
-      redirect: true,
-      redirectTo: "/", // Specify the redirect path after successful login
     });
+
+    return null;
   } catch (error) {
     const err = error as Error;
     return err.message; // Handle error message display if needed
