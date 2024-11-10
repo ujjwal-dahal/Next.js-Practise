@@ -1,16 +1,12 @@
+"use server";
+
 // loginHandler.ts
 import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
 
 export const loginHandler = async (formData: FormData) => {
-  const email = formData.get("email") as string | undefined;
-  const password = formData.get("password") as string | undefined;
-
-  // Validate if email and password are provided
-  if (!email || !password) {
-    // throw new Error("Please provide Email and Password.");
-    toast.error("Please provide Email and Password.")
-  }
+  const email = formData.get("email") as string 
+  const password = formData.get("password") as string 
 
   try {
     //signIn method auth file dekhi aayo
